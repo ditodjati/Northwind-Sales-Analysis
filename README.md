@@ -49,9 +49,10 @@ northwind-sales-analysis/
 │   ├── top_10_customers.png
 │   ├── revenue_by_country.png
 │   └── employee_performance.png
-└── data/
-    └── processed/
-        └── sales_fact_table.csv
+├── data/
+│   └── processed/
+│       └── sales_fact_table.csv
+└── reports/  (optional, only if you write a separate written report)
 ```
 
 ## Full Analysis
