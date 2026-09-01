@@ -1,0 +1,85 @@
+Table,Field,Description
+categories,categoryID,Unique identifier for each product category
+categories,categoryName,Name of the category (e.g. Beverages, Condiments)
+categories,description,Free text description of the category
+categories,picture,Binary OLE image blob for the category icon, not usable as analytical data
+customers,customerID,Unique 5 character code identifying each customer
+customers,companyName,Customer's business name
+customers,contactName,Name of the primary contact person at the customer
+customers,contactTitle,Job title of the primary contact
+customers,address,Street address of the customer
+customers,city,City of the customer
+customers,region,State or province, used only for some countries such as USA and Canada, blank otherwise
+customers,postalCode,Postal or zip code
+customers,country,Country of the customer
+customers,phone,Primary phone number
+customers,fax,Fax number, blank for customers without one
+employees,employeeID,Unique identifier for each employee
+employees,lastName,Employee's last name
+employees,firstName,Employee's first name
+employees,title,Job title (e.g. Sales Representative, Vice President Sales)
+employees,titleOfCourtesy,Courtesy title (Mr., Ms., Mrs., Dr.)
+employees,birthDate,Employee's date of birth
+employees,hireDate,Date the employee was hired
+employees,address,Street address of the employee
+employees,city,City of the employee
+employees,region,State or province of the employee
+employees,postalCode,Postal or zip code of the employee
+employees,country,Country of the employee
+employees,homePhone,Home phone number
+employees,extension,Internal phone extension
+employees,photo,Binary OLE image blob for the employee photo, not usable as analytical data
+employees,notes,Free text biography or notes about the employee
+employees,reportsTo,employeeID of this employee's manager, blank for the top of the org chart
+employees,photoPath,URL path reference to the employee photo file
+employee_territories,employeeID,Foreign key to employees, identifies which employee is assigned
+employee_territories,territoryID,Foreign key to territories, identifies which sales territory is assigned
+order_details,orderID,Foreign key to orders, identifies which order this line item belongs to
+order_details,productID,Foreign key to products, identifies which product was ordered
+order_details,unitPrice,Price of the product at the time the order was placed
+order_details,quantity,Number of units ordered on this line
+order_details,discount,Discount rate applied to this line item, expressed as a decimal proportion
+orders,orderID,Unique identifier for each order
+orders,customerID,Foreign key to customers, identifies who placed the order
+orders,employeeID,Foreign key to employees, identifies the sales rep who processed the order
+orders,orderDate,Date the order was placed
+orders,requiredDate,Date the customer requested delivery by
+orders,shippedDate,Date the order actually shipped, blank if not yet shipped
+orders,shipVia,Foreign key to shippers, identifies which carrier delivered the order
+orders,freight,Shipping cost charged for the order
+orders,shipName,Name on the shipping label, may differ from the customer's company name
+orders,shipAddress,Street address the order was shipped to
+orders,shipCity,City the order was shipped to
+orders,shipRegion,State or province the order was shipped to
+orders,shipPostalCode,Postal or zip code the order was shipped to
+orders,shipCountry,Country the order was shipped to
+products,productID,Unique identifier for each product
+products,productName,Name of the product
+products,supplierID,Foreign key to suppliers, identifies who supplies this product
+products,categoryID,Foreign key to categories, identifies the product category
+products,quantityPerUnit,Free text description of packaging (e.g. 10 boxes x 20 bags)
+products,unitPrice,Current list price of the product
+products,unitsInStock,Number of units currently held in inventory
+products,unitsOnOrder,Number of units currently on order from the supplier
+products,reorderLevel,Inventory threshold at which more stock should be ordered
+products,discontinued,Flag indicating whether the product has been discontinued, 1 or 0
+regions,regionID,Unique identifier for each sales region
+regions,regionDescription,Name of the region (e.g. Eastern, Western, Northern, Southern)
+shippers,shipperID,Unique identifier for each shipping company
+shippers,companyName,Name of the shipping company
+shippers,phone,Phone number of the shipping company
+suppliers,supplierID,Unique identifier for each supplier
+suppliers,companyName,Supplier's business name
+suppliers,contactName,Name of the primary contact at the supplier
+suppliers,contactTitle,Job title of the primary contact
+suppliers,address,Street address of the supplier
+suppliers,city,City of the supplier
+suppliers,region,State or province of the supplier, blank where not applicable
+suppliers,postalCode,Postal or zip code of the supplier
+suppliers,country,Country of the supplier
+suppliers,phone,Phone number of the supplier
+suppliers,fax,Fax number, blank for suppliers without one
+suppliers,homePage,URL of the supplier's website, blank if not on file
+territories,territoryID,Unique identifier for each sales territory, stored as a 5 digit code
+territories,territoryDescription,Name of the territory (e.g. Westboro, Bedford)
+territories,regionID,Foreign key to regions, identifies which region the territory belongs to
