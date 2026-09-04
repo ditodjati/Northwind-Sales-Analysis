@@ -37,22 +37,34 @@ Python, pandas, matplotlib, seaborn, Jupyter Notebook
 ## Project Structure
 
 ```
-northwind-sales-analysis/
-├── README.md
-├── requirements.txt
+Northwind-Sales-Analysis/
+├── data/
+│   ├── processed/
+│   |   └── sales_fact_table.csv
+│   ├── raw/
+│   |   ├── categories.csv
+│   |   ├── customers.csv
+│   |   ├── employee_territories.csv
+│   |   ├── employees.csv
+│   |   ├── order_details.csv
+│   |   ├── orders.csv
+│   |   ├── products.csv
+│   |   ├── regions.csv
+│   |   ├── shippers.csv
+│   |   ├── suppliers.csv
+│   |   └── territories.csv
+│   └── data_dictionary.csv
+├── images/
+│   ├── employee_performance.png
+│   ├── monthly_revenue_trend.png
+│   ├── revenue_by_category.png
+│   ├── revenue_by_country.png
+│   ├── top_10_customers.png
+│   └── top_10_products.png
 ├── notebooks/
 │   └── Northwind_Sales_Analysis.ipynb
-├── images/
-│   ├── monthly_revenue_trend.png
-│   ├── top_10_products.png
-│   ├── revenue_by_category.png
-│   ├── top_10_customers.png
-│   ├── revenue_by_country.png
-│   └── employee_performance.png
-├── data/
-│   └── processed/
-│       └── sales_fact_table.csv
-└── reports/  (optional, only if you write a separate written report)
+├── README.md
+└── requirements.txt
 ```
 
 ## Full Analysis
